@@ -1,13 +1,18 @@
+import { Routes,Route } from "react-router-dom"
+import ErrorPage from "./pages/ErrorPage"
+import Login from "./pages/Login"
 
 function App() {
 
   return (
-    <>
-      <div>
-        <h1 className='text-3xl font-bold underline'>Hello world!</h1>
-      </div>
-      
-    </>
+    <div className='App'>
+      <Routes>
+        <Route path="*" element={<ErrorPage />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        
+      </Routes>
+    </div>
   )
 }
 
